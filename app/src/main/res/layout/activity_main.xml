@@ -22,7 +22,7 @@
         android:layout_marginStart="15dp"
         android:text="Total Cash In"
         android:textColor="@color/green"
-        android:textSize="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -31,13 +31,13 @@
         android:id="@+id/TotalCashOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginBottom="50dp"
         android:text="Total Cash Out"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/red"
-        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Balance"
         app:layout_constraintStart_toEndOf="@+id/TotalCashIn" />
 
     <TextView
@@ -45,25 +45,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
+        android:layout_marginEnd="15dp"
         android:text="Balance"
         android:layout_marginStart="10dp"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/TotalCashOut" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/tvCashIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
         android:layout_marginBottom="8dp"
         android:text="1000"
         android:textColor="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/TotalCashIn"
+        app:layout_constraintStart_toStartOf="@+id/TotalCashIn"
         app:layout_constraintTop_toBottomOf="@+id/TotalCashIn" />
 
 
@@ -71,24 +71,24 @@
         android:id="@+id/tvCashOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
         android:layout_marginBottom="8dp"
         android:text="1000"
         android:textColor="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/TotalCashOut"
+        app:layout_constraintStart_toStartOf="@+id/TotalCashOut"
         app:layout_constraintTop_toBottomOf="@+id/TotalCashOut" />
 
     <TextView
         android:id="@+id/tvBalance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="340dp"
         android:layout_marginBottom="8dp"
         android:text="1000"
         android:textColor="@color/darkBlue"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Balance"
+        app:layout_constraintStart_toStartOf="@+id/Balance"
         app:layout_constraintTop_toBottomOf="@+id/Balance" />
 
     <Button
@@ -101,7 +101,7 @@
         app:backgroundTint="@color/green1"
         android:text="Cash In"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/TotalCashIn"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
@@ -118,7 +118,7 @@
         app:backgroundTint="@color/Orange"
         android:text="Cash Out"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/Balance"
         app:layout_constraintEnd_toEndOf="parent"
@@ -160,8 +160,10 @@
                 android:layout_height="wrap_content"
                 android:text="Date"
                 android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/All"
                 tools:ignore="MissingConstraints" />
@@ -172,8 +174,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="210dp"
                 android:text="Cash In"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/green"
-                android:textSize="20dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/All" />
@@ -183,8 +186,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cash Out"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/red"
-                android:textSize="20dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/CashIn"
